@@ -1,0 +1,12 @@
+Package: setset
+Version: 0.0.0.9000
+Date: 2015-02-20
+Title: Sensor Time Series Error Tools
+Authors@R: person("Tim", "Meehan", email="tmeehan@neoninc.org", role=c("aut","cre"))
+Author: Tim Meehan
+Maintainer: Tim Meehan <tmeehan@neoninc.org>
+Depends: R (>= 3.1.2)
+Suggests: None
+Description: The setset package contains a few simple functions for injecting different types of errors into clean sensor time series. This is useful for testing if time series error flagging algorithms are effectively identifying errors in sensor data. The different types of errors include gaps with no data, white noise and extreme spikes, oscillations, and fixed values. Functions generate side-by-side plots depicting clean data, error injected data, and locations of injected errors.
+License: The GNU General Public License version 3
+LazyData: true
