@@ -38,8 +38,16 @@ gapval <- function(y, n=1, min.dur=1, max.dur=1, plot=F) {
     duranom <- sample(1:(maxgap-mingap), size=1)
     tstart <- sample(tvec, size=1)
     tend <- tstart + duranom
-    dat[tstart:tend] <- NA
-    gap_ind[tstart:tend] <- as.vector(rep(1, duranom))
+    if(tend <= length(tvec)){
+      dat[tstart:tend] <- NA
+      gap_ind[tstart:tend] <- as.vector(rep(1, duranom))
+    }
+    if(tend > length(tvec)){
+      tend <- length(tvec)
+      dat[tstart:tend] <- NA
+      duranom <- tend - tstart
+      gap_ind[tstart:tend] <- as.vector(rep(1, duranom))
+    }
   }
   ### prepare output list
   new.data <- as.vector(dat)
