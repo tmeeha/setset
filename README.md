@@ -5,7 +5,6 @@ This is the GitHub repository for the setset package for R. The setset package c
 
 The package can be installed into R using:
 
-library(devtools)
-install_github("tmeeha/setset")
+library(devtools); install_github("tmeeha/setset")
 
 The devtools package is available on CRAN.
